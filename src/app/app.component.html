@@ -1,0 +1,18 @@
+
+<!---One way databinding : interpolation : TS ->HTML -->
+{{ title }}
+<!---One way databinding: event binding -HTML->TS-->
+<button (click)="f('a')">Save</button>
+
+<input value={{title}}> <br>
+<input value="title"> <br>
+
+<!--- One way databinding: Property binding: TS -> HTML-->
+<input [value]="title">
+<div [style]="style1">Bonjour</div>
+
+<!---2- définir le lien --->
+<a [routerLink]="['home']">Residences</a>
+<br>
+<!---3-Où charger la vue du composant correspondant au path actuel-->
+<router-outlet></router-outlet>
