@@ -1,5 +1,11 @@
 
-
+<!--TestComponent : composant fils --->
+<app-test #mouheb (prop3)="test($event)" [prop1]="title"></app-test>
+<div>
+  from parent : 
+  {{mouheb.prop2}}
+</div>
+<br>
 <!---One way databinding : interpolation : TS ->HTML -->
 {{ title }}
 <!---One way databinding: event binding -HTML->TS-->
