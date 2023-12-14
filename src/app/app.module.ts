@@ -11,7 +11,7 @@ import { ApartmentsComponent } from './apartments/apartments.component';
 import { FormResidenceComponent } from './form-residence/form-residence.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FormApartmentComponent } from './form-apartment/form-apartment.component';
-
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   //la liste des composants attachés à  ce module
   declarations: [
@@ -27,7 +27,8 @@ import { FormApartmentComponent } from './form-apartment/form-apartment.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule, //pour pouvoir utiliser la directive ngModel
-    ReactiveFormsModule
+    ReactiveFormsModule,// FormGroupDirective, FormControlName
+    HttpClientModule //pour pouvoir utiliser le service HttpClient
   ],
   providers: [],
   //les composants à appeler dans le fichier index.html

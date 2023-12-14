@@ -16,7 +16,95 @@
   "profile": {
     "name": "typicode"
   },
-  "apartments":[
-    
+  "residences": [
+    {
+      "id": 3,
+      "name": "El Arij1",
+      "address": "Rades",
+      "image": "../../assets/images/R3.jpg"
+    },
+    {
+      "id": 4,
+      "name": "El Anber1",
+      "address": "Manzah 5",
+      "image": "../../assets/images/R4.jpg"
+    }
+  ],
+  "apartments": [
+    [
+      {
+        "id": 1,
+        "appartNum": 1,
+        "floorNum": 0,
+        "surface": 100,
+        "terrace": "oui",
+        "surfaceTerrace": 20,
+        "category": "S+1",
+        "description": "AppartementS+1",
+        "residence": {
+          "id": 4,
+          "name": "El Anber1",
+          "address": "Manzah 5",
+          "image": "../../assets/images/R4.jpg"
+        }
+      },
+      {
+        "id": 2,
+        "appartNum": 2,
+        "floorNum": 0,
+        "surface": 130,
+        "terrace": "non",
+        "surfaceTerrace": 0,
+        "category": "S+2",
+        "description": "AppartementS+2",
+        "residence": {
+          "id": 4,
+          "name": "El Anber1",
+          "address": "Manzah 5",
+          "image": "../../assets/images/R4.jpg"
+        }
+      },
+      {
+        "id": 3,
+        "appartNum": 3,
+        "floorNum": 0,
+        "surface": 150,
+        "terrace": "oui",
+        "surfaceTerrace": 30,
+        "category": "S+3",
+        "description": "AppartementS+3",
+        "residence": {
+          "id": 4,
+          "name": "El Anber1",
+          "address": "Manzah 5",
+          "image": "../../assets/images/R4.jpg"
+        }
+      }
+    ],
+    {
+      "id": 1,
+      "appartNum": 1,
+      "floorNum": 0,
+      "surface": 100,
+      "terrace": "oui",
+      "surfaceTerrace": 20,
+      "category": "S+1",
+      "description": "AppartementS+1",
+      "residence": {}
+    },
+    {
+      "residence": {},
+      "appartNum": "777",
+      "surface": "777",
+      "floorNum": "777",
+      "id": 2
+    },
+    {
+      "residence": {},
+      "appartNum": "741",
+      "surface": "777",
+      "floorNum": "963",
+      "id": 3
+    }
   ]
 }

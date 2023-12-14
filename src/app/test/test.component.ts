@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ApartmentService } from '../shared/apartment.service';
 
 @Component({
   selector: 'app-test',
@@ -7,6 +8,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class TestComponent {
 
+  constructor(private aps:ApartmentService){
+    console.log(this.aps.getApartments())
+  }
   //prop1: propriété d'entrée de ce composant
   //sa valeur sera envoyée par le composant parent
   @Input() prop1:string="";

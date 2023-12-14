@@ -6,7 +6,8 @@ import { ApartmentService } from '../shared/apartment.service';
 @Component({
   selector: 'app-residences',
   templateUrl: './residences.component.html',
-  styleUrls: ['./residences.component.css']
+  styleUrls: ['./residences.component.css'],
+ // providers:[ApartmentService]
 })
 export class ResidencesComponent {
   surface : number;
@@ -16,11 +17,16 @@ export class ResidencesComponent {
   constructor(private aps:ApartmentService){}
 
   ngOnInit(){
-    this.listResidences=this.aps.getResidences();
-    this.listApartments=this.aps.getApartments();
+    //this.listResidences=this.aps.getResidences();
+    this.aps.getAllResidences().subscribe(res=>this.listResidences=res);
+   // this.listApartments=this.aps.getApartments();
+   this.aps.getAllApartments().subscribe(res=>this.listApartments=res);
   }
   setName(val:string){
     this.name=val;
+  }
+  deleteResidence(r:Residence){
+    this.aps.deleteResidence(r).subscribe(()=>this.aps.getAllResidences().subscribe(res=>this.listResidences=res));
   }
   listResidences:Residence[]=[];
   listApartments:Apartment[]=[];
@@ -29,7 +35,7 @@ export class ResidencesComponent {
   this.list=[];
   for ( let a of this.listApartments){
      console.log(a);
-     if (a.residence.id == nb){
+     if (a.residence?.id == nb){
           this.list.push(a);
      }
   }

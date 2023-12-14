@@ -1,4 +1,4 @@
-<form [formGroup]="myForm">
+<form [formGroup]="myForm" (submit)="addA()">
     <table>
         <div formGroupName="sousgroupe1">
         <tr>
@@ -7,7 +7,7 @@
             <div *ngIf="NumApart.invalid && NumApart.touched">
                <div *ngIf="NumApart.errors['required']"> Champ obligatoire</div>
                <div *ngIf="NumApart.errors['pattern']">Le Champ doit contenir des chiffres uniquement</div>
-               
+
             </div>
         </td>
         </tr>
